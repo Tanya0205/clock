@@ -1,0 +1,130 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #030a1fdb;
+}
+
+body.dark {
+  background-color: white;
+}
+.fa-moon {
+  height: 20px;
+  width: 20px;
+  display: flex;
+  color: #f1c40f;
+  /* transition: ease-in-out(); */
+}
+.fa-sun {
+  height: 20px;
+  width: 20px;
+  display: flex;
+  color: #f1c40f;
+}
+
+.checkbox {
+  position: absolute;
+  top: 10%;
+  left: 89%;
+  opacity: 0;
+}
+
+.label {
+  height: 25px;
+  width: 52px;
+  background: #111;
+  border-radius: 50px;
+  display: flex;
+  position: absolute;
+  top: 10%;
+  left: 89%;
+  justify-content: space-between;
+  padding: 5px;
+  transform: scale(1.5);
+}
+
+.ball {
+  height: 19px;
+  width: 20px;
+  background-color: #fff;
+  top: 2px;
+  left: -1px;
+  border-radius: 50%;
+  position: absolute;
+  transition: background 0.2s linear;
+}
+.checkbox:checked + .label .ball {
+  transform: translateX(25px);
+}
+#main {
+  color: yellowgreen;
+  top: 10%;
+  position: absolute;
+  left: 5%;
+  /* margin-top: 15%;
+  margin-left: 100px;
+  padding-left: 30px; */
+  font-size: 56px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+#by {
+  color: rgb(240, 5, 71);
+
+  font-size: 22;
+  top: 17%;
+  position: absolute;
+  left: 16%;
+
+  /* margin-left: 500px; */
+}
+.clock {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 15%;
+  background: url(https://freepngimg.com/thumb/clock/33735-6-clock-no-hands-clipart.png);
+  background-size: cover;
+  position: relative;
+  /* border: 4px solid black;
+  border-radius: 50%; */
+  /* box-shadow: 100px; */
+  border-radius: 50%;
+
+  box-shadow: inset 14px 14px 36px #151111, inset -14px -14px 36px #231d1d;
+}
+
+.sec {
+  height: 120px;
+  width: 2px;
+  background: red;
+  position: absolute;
+  transform: translateY(-50%);
+  transform-origin: bottom;
+}
+.mn {
+  height: 100px;
+  width: 3px;
+  background: black;
+  position: absolute;
+  transform: translateY(-50%);
+  transform-origin: bottom;
+}
+.hr {
+  height: 70px;
+  width: 5px;
+  background: black;
+  position: absolute;
+  transform: translateY(-50%);
+  transform-origin: bottom;
+}
